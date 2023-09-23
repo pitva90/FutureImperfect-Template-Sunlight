@@ -1,0 +1,28 @@
+{
+    "$schema": "../../../system/schema/extend.json",
+    "name": "Codemirror",
+    "description": "Syntax highlighter for administration.",
+    "authors": [
+        {"url": "https://sunlight-cms.cz/"}
+    ],
+    "version": "1.0",
+    "environment": {
+        "system": "^8.0"
+    },
+    "events.admin": [
+        {"event": "admin.editor", "script": "event/admin_editor.php"},
+        {"event": "admin.head", "script": "event/admin_head.php", "group": "codemirror"},
+        {"event": "admin.style", "script": "event/admin_style.php"}
+    ],
+    "extra": {
+        "supported_formats": {
+            "xml": true,
+            "css": true,
+            "js": true,
+            "json": true,
+            "php": true,
+            "php-raw": true,
+            "html": true
+        }
+    }
+}

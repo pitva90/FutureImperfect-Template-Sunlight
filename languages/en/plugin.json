@@ -1,0 +1,16 @@
+{
+    "$schema": "../../../system/schema/language.json",
+    "name": "English",
+    "description": "English translation files.",
+    "authors": [
+        {"url": "https://sunlight-cms.cz/"}
+    ],
+    "version": "1.0",
+    "environment": {
+        "system": "^8.0"
+    },
+    "class": "EnglishLanguage",
+    "iso_code": "en",
+    "decimal_point": ".",
+    "thousands_separator": ","
+}

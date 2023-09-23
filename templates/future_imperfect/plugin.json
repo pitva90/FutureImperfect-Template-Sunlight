@@ -1,0 +1,35 @@
+{
+    "$schema": "../../../system/schema/template.json",
+    "name": "FutureImperfect",
+	"description": "8.x FutureImperfect Template",
+    "authors": [
+		{"url": "https://html5up.net"},
+		{"url": "https://www.pitak.wtf"}
+    ],
+    "version": "1.0",
+    "environment": {
+        "system": "^8.0"
+    },
+    "layouts": {
+        "default": {
+            "template": "template.php",
+            "slots": [
+            "topSearch",
+            "leftSideBar"
+            ]
+        }
+    },
+		"css": [
+			"assets/css/main.css",
+			"assets/css/fontawesome-all.min.css"
+		],
+		"js": [
+			"assets/js/browser.min.js",
+			"assets/js/breakpoints.min.js",
+			"assets/js/main.js",
+			"assets/js/util.js"
+		],
+    "box.item": "section",
+    "box.title": "h2",
+    "box.title.inside": true
+}

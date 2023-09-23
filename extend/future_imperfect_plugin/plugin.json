@@ -1,0 +1,15 @@
+{
+	"$schema": "../../../system/schema/extend.json",
+	"name": "FutureImperfect Plugin",
+	"description": "Plugin pro motiv Future Imperfect.",
+	"authors": [
+		{"url": "https://pitak.wtf/"}
+	],
+	"version": "0.0.1",
+	"environment": {
+		"system": "^8.0"
+	},
+	"events": [
+		{"event": "article.preview", "script": "event/article_list.php"}
+	]
+}

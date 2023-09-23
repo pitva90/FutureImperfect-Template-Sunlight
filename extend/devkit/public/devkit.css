@@ -1,0 +1,215 @@
+/* Toolbar */
+#devkit-toolbar * {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    font-size: 14px;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    background: none;
+    line-height: 100%;
+}
+#devkit-toolbar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    box-sizing: content-box;
+    padding: 0 10px;
+    width: 100%;
+    background: #1c1c1c;
+}
+#devkit-toolbar.devkit-toolbar-closed {
+    left: auto;
+    right: 0;
+    width: 24px;
+    height: 38px;
+    overflow: hidden;
+    border-radius: 10px 0 0 0;
+    outline: none;
+    opacity: 0.5;
+}
+#devkit-toolbar.devkit-toolbar-closed:hover {
+    opacity: 1;
+}
+
+/* Sections */
+#devkit-toolbar .devkit-section {
+    float: left;
+    padding: 13px 15px 13px 32px;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    font-size: 12px;
+    user-select: none;
+}
+#devkit-toolbar .devkit-section.devkit-section-warning {
+    border-right: 1px solid #1c1c1c;
+    background-color: #ad9303;
+}
+#devkit-toolbar .devkit-section.devkit-section-error {
+    border-right: 1px solid #1c1c1c;
+    background-color: #950202;
+}
+#devkit-toolbar.devkit-toolbar-closed .devkit-section {
+    display: none;
+}
+
+#devkit-toolbar .devkit-sl {background-image: url("images/sl.png");}
+#devkit-toolbar .devkit-time {background-image: url("images/time.png");}
+#devkit-toolbar .devkit-memory {background-image: url("images/memory.png");}
+#devkit-toolbar .devkit-database {background-image: url("images/database.png");}
+#devkit-toolbar .devkit-extend {background-image: url("images/plugin.png");}
+#devkit-toolbar .devkit-logger {background-image: url("images/log.png");}
+#devkit-toolbar .devkit-plugin-errors {background-image: url("images/error.png");}
+#devkit-toolbar .devkit-request {background-image: url("images/request.png");}
+#devkit-toolbar .devkit-login {background-image: url("images/login.png");}
+#devkit-toolbar .devkit-lang {background-image: url("images/lang.png");}
+#devkit-toolbar .devkit-dump {background-image: url("images/dump.png");}
+
+#devkit-toolbar > a:hover .devkit-section,
+#devkit-toolbar .devkit-toggleable:hover {
+    background-color: #3f3f3f;
+}
+
+/* Toggleable sections */
+#devkit-toolbar .devkit-toggleable {
+    cursor: pointer;
+}
+
+/* Toggleable content */
+#devkit-toolbar > .devkit-content {
+    display: none;
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    bottom: 38px;
+    width: 100%;
+    min-width: 700px;
+    height: 100%;
+    background-color: #3f3f3f;
+}
+#devkit-toolbar > .devkit-content > div {
+    padding: 13px;
+}
+body.devkit-content-open {
+    overflow: hidden;
+}
+
+/* Links */
+#devkit-toolbar > .devkit-content a {
+    color: #f60;
+}
+#devkit-toolbar > .devkit-content a:hover {
+    text-decoration: underline;
+}
+
+/* Sql log */
+#devkit-toolbar li.devkit-slow-query > input {
+    color: #a00;
+}
+
+/* Request */
+#devkit-toolbar .devkit-request-dump {
+    padding: 13px;
+    margin: 8px 0;
+    background-color: #1c1c1c;
+    white-space: pre;
+}
+
+/* Hide/show */
+#devkit-toolbar .devkit-hideshow {
+    cursor: pointer;
+}
+
+/* Buttons */
+#devkit-toolbar .devkit-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 2px 12px;
+    font-size: 30px;
+    color: #777;
+    cursor: pointer;
+    user-select: none;
+}
+#devkit-toolbar.devkit-toolbar-closed .devkit-close {
+    display: none;
+}
+#devkit-toolbar.devkit-toolbar-open .devkit-open {
+    display: none;
+}
+
+/* Tables */
+#devkit-toolbar table {
+    border-collapse: collapse;
+}
+#devkit-toolbar th {
+    background-color: #3f3f3f;
+}
+#devkit-toolbar th,
+#devkit-toolbar td {
+    padding: 10px;
+    border: 1px solid #3f3f3f;
+    vertical-align: top;
+    text-align: left;
+}
+#devkit-toolbar td {
+    background-color: #1c1c1c;
+}
+#devkit-toolbar .devkit-cell-shrink {
+    width: 0;
+    white-space: nowrap;
+}
+
+/* Generic */
+#devkit-toolbar .devkit-hidden {
+    display: none;
+}
+#devkit-toolbar .devkit-heading {
+    margin: 30px 0 10px 0;
+    font-size: 19px;
+    font-weight: bold;
+}
+#devkit-toolbar .devkit-heading:first-child {
+    margin-top: 0;
+}
+#devkit-toolbar .devkit-heading * {
+    font-size: inherit;
+}
+#devkit-toolbar ol, #devkit-toolbar ul {
+    margin: 10px 0 10px 20px;
+}
+#devkit-toolbar li {
+    line-height: 150%;
+    padding: 2px 0;
+}
+#devkit-toolbar input {
+    padding: 5px;
+    border: none;
+    background: none;
+}
+#devkit-toolbar .devkit-type {
+    color: #0077A7;
+}
+#devkit-toolbar code, #devkit-toolbar pre {
+    font-family: monospace;
+    overflow-y: visible;
+}
+#devkit-toolbar pre {
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+#devkit-toolbar .break-all {
+    word-break: break-all;
+}

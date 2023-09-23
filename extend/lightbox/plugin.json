@@ -1,0 +1,36 @@
+{
+    "$schema": "../../../system/schema/extend.json",
+    "name": "Lightbox",
+    "description": "A lightbox plugin for images and galleries.",
+    "authors": [
+        {"url": "https://sunlight-cms.cz/"}
+    ],
+    "version": "1.0",
+    "environment": {
+        "system": "^8.0"
+    },
+    "actions": {
+        "config": "ConfigAction"
+    },
+    "config_defaults": {
+        "dark_mode": null,
+        "options": {
+            "fadeDuration": 300,
+            "resizeDuration": 300
+        }
+    },
+    "langs": {
+        "lightbox": "lang"
+    },
+    "events": [
+        {"event": "image.lightbox", "script": "event/image_lightbox.php"}
+    ],
+    "events.web": [
+        {"event": "tpl.head", "script": "event/head_assets.php", "group": "lightbox"},
+        {"event": "tpl.body.end", "script": "event/body_assets.php", "group": "lightbox"}
+    ],
+    "events.admin": [
+        {"event": "admin.head", "script": "event/head_assets.php", "group": "lightbox"},
+        {"event": "admin.body.end", "script": "event/body_assets.php", "group": "lightbox"}
+    ]
+}
